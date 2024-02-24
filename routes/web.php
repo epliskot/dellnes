@@ -29,7 +29,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 Route::get('/bilder', function () {
-    return view('bilder');
+    $images = DB::table('table_image')->select('id','name','file_path')->get();
+    return view('bilder', compact('images'));
 })->middleware(['auth', 'verified'])->name('bilder');
 
 //Route::get('/slektstre', function () {
@@ -48,6 +49,15 @@ Route::get('/notat', function () {
 Route::get('/notat', [FormValidationController::class, 'createNotatForm']);
 Route::post('/notat', [FormValidationController::class, 'NotatForm'])->name('validate.notat');
 
+use App\Http\Controllers\ImageUploadController;
+
+  
+
+  
+
+Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
+
+Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
 
 
 require __DIR__.'/auth.php';
