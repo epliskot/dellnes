@@ -19,6 +19,6 @@ class FormValidationController extends Controller
             'notat'
         ]);
         Notats::create($request->all());
-        return back()->with('success', 'Notatet er lagret.');
+        return back()->with('success', 'Notatet er sendt inn!');
     }
 }
