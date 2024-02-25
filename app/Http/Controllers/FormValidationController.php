@@ -14,9 +14,9 @@ class FormValidationController extends Controller
     public function NotatForm(Request $request) {
         $this->validate($request, [
             'person' => 'required',
-            'tag',
+            'tag' => 'required',
             'created_by',
-            'notat'
+            'notat' =>'required'
         ]);
         Notats::create($request->all());
         return back()->with('success', 'Notatet er sendt inn!');

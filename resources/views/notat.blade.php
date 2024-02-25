@@ -50,7 +50,7 @@
             <x-input-error :messages="$errors->get('notat')" class="mt-2" />
         </div>
         <div class="mt-4">
-            <!-- <x-input-label for="created_by" value="Notat laget av: {{ __(Auth::user()->name) }}" /> -->
+          
             <x-text-input type="hidden" name="created_by" value="{{ __(Auth::user()->name) }}" />
 
         </div>
