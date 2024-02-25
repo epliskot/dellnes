@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Form;
+use App\Models\Notats;
 
 class FormValidationController extends Controller
 {
@@ -13,10 +13,12 @@ class FormValidationController extends Controller
     }
     public function NotatForm(Request $request) {
         $this->validate($request, [
-            'notat' => 'required'
-
+            'person' => 'required',
+            'tag',
+            'created_by',
+            'notat'
         ]);
-        Form::create($request->all());
+        Notats::create($request->all());
         return back()->with('success', 'Notatet er lagret.');
     }
 }

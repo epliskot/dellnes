@@ -68,6 +68,6 @@
         </div>
     </div>
     @foreach($persons as $person)
-   {{ $person->id }} {{ $person->fornavn }}
+   {{ $person->id }} {{ $person->name }}
 @endforeach
 </x-app-layout>

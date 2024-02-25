@@ -38,16 +38,16 @@ Route::get('/bilder', function () {
 //})->middleware(['auth', 'verified'])->name('slektstre');
 
 Route::get('/slektstre', function () {
-    $persons = DB::table('person')->select('id','fornavn')->get();
+    $persons = DB::table('person')->select('id','name')->get();
     return view('slektstre', compact('persons'));
 })->middleware(['auth', 'verified'])->name('slektstre');
 
-Route::get('/notat', function () {
-    return view('notat');
-})->middleware(['auth', 'verified'])->name('notat');
+Route::get('/notats', function () {
+    return view('notats');
+})->middleware(['auth', 'verified'])->name('notats');
 
-Route::get('/notat', [FormValidationController::class, 'createNotatForm']);
-Route::post('/notat', [FormValidationController::class, 'NotatForm'])->name('validate.notat');
+Route::get('/notats', [FormValidationController::class, 'createNotatForm']);
+Route::post('/notats', [FormValidationController::class, 'NotatForm'])->name('validate.notats');
 
 use App\Http\Controllers\ImageUploadController;
 

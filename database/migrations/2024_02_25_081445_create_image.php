@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('forms', function (Blueprint $table) {
+        Schema::create('image', function (Blueprint $table) {
             $table->id();
-            $table->string('person',200);
-            $table->string('tag',300);
-            $table->string('created_by',200);
-            $table->text('notat');
             $table->timestamps();
+            $table->string('file_path',300);
+            $table->string('uploaded_by',100);
+            $table->text('description');
+            $table->string('name',100);
+
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('forms');
+        Schema::dropIfExists('image');
     }
 };
