@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-    <title>Last opp bilde</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-</head>
-
-    
-
-<body>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Last opp bilde') }}
+          
+        </h2>
+    </x-slot>
 
 <div class="container">
 
@@ -20,7 +12,7 @@
 
     <div class="panel panel-primary">
 
-      <div class="panel-heading"><h2>Last opp bilde</h2></div>
+
 
       <div class="panel-body">
 
@@ -46,7 +38,7 @@
 
             <div class="alert alert-danger">
 
-                <strong>Whoops!</strong> There were some problems with your input.
+                <strong>Whoops!</strong> Finner feil ved opplasting, send gjerne bilde til: jonandre@dellnes.no så skal jeg legge det ut.
 
                 <ul>
 
@@ -82,7 +74,7 @@
 
                 <div class="col-md-6">
 
-                    <button type="submit" class="btn btn-success">Upload</button>
+                    <button type="submit" class="btn btn-success">[Send inn]</button>
 
                 </div>
 
@@ -100,5 +92,4 @@
 
 </div>
 
-</body>
-</html>
+</x-app-layout>

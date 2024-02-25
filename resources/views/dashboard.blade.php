@@ -14,7 +14,7 @@
                    
                     <!-- <img src="{{ asset('test/images.jpeg') }}" /> -->
                     
-                    <a href="{{ url('/bilder') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">[Bilder]</a>
+                    <a href="{{ url('/bilder') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">[Se på Bilder]</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,21 @@
                    
                     <!-- <img src="{{ asset('test/images.jpeg') }}" /> -->
                     
-                    <a href="{{ url('/slektstre') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">[Slektstre]</a>
+                    <a href="{{ url('/slektstre') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">[Se på slektstre]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                  
+                    
+                   
+                    <!-- <img src="{{ asset('test/images.jpeg') }}" /> -->
+                    
+                    <a href="{{ url('/seNotater') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">[Se i notater]</a>
                 </div>
             </div>
         </div>

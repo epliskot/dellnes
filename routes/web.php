@@ -42,6 +42,11 @@ Route::get('/slektstre', function () {
     return view('slektstre', compact('persons'));
 })->middleware(['auth', 'verified'])->name('slektstre');
 
+Route::get('/seNotater', function () {
+    $notatss = DB::table('notats')->select('person','notat','created_by', 'created_at')->get();
+    return view('seNotater', compact('notatss'));
+})->middleware(['auth', 'verified'])->name('seNotater');
+
 Route::get('/notats', function () {
     return view('notats');
 })->middleware(['auth', 'verified'])->name('notats');

@@ -32,7 +32,7 @@
             <x-input-error :messages="$errors->get('person')" class="mt-2" />
         </div>
         <div class="mt-4">
-            <x-input-label for="tag" :value="__('Skriv gjerne noen emneord (bryllup, ferie, selskap, fritid e.l.)')" />
+            <x-input-label for="tag" :value="__('Skriv gjerne noen emneord (bryllup, ferie, selskap, fritid, jobb o.l.)')" />
             <x-text-input id="tag" class="block mt-1 w-full" type="tag" name="tag" :value="old('tag')" />
             <x-input-error :messages="$errors->get('tag')" class="mt-2" />
         </div>
