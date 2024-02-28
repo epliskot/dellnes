@@ -33,6 +33,8 @@ Route::get('/bilder', function () {
     return view('bilder', compact('images'));
 })->middleware(['auth', 'verified'])->name('bilder');
 
+
+
 //Route::get('/slektstre', function () {
 //    return view('slektstre');
 //})->middleware(['auth', 'verified'])->name('slektstre');
