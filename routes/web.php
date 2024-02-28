@@ -53,7 +53,7 @@ Route::get('/notats', function () {
     return view('notats');
 })->middleware(['auth', 'verified'])->name('notats');
 
-Route::get('/notats', [FormValidationController::class, 'createNotatForm']);
+Route::get('/notats', [FormValidationController::class, 'createNotatForm'])->middleware(['auth', 'verified'])->name('notats');
 Route::post('/notats', [FormValidationController::class, 'NotatForm'])->name('validate.notats');
 
 use App\Http\Controllers\ImageUploadController;
@@ -62,7 +62,7 @@ use App\Http\Controllers\ImageUploadController;
 
   
 
-Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
+Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload')->middleware(['auth', 'verified'])->name('upload-image');
 
 Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
 
