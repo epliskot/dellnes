@@ -49,6 +49,11 @@ Route::get('/seNotater', function () {
     return view('seNotater', compact('notatss'));
 })->middleware(['auth', 'verified'])->name('seNotater');
 
+Route::get('/logg', function () {
+    $logg = DB::table('logg')->select('id','oppdatering_av','oppdatering_hva')->get();
+    return view('logg', compact('logg'));
+})->middleware(['auth', 'verified'])->name('logg');
+
 Route::get('/notats', function () {
     return view('notats');
 })->middleware(['auth', 'verified'])->name('notats');
