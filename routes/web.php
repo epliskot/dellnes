@@ -73,4 +73,5 @@ Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->nam
 Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
 
 
+
 require __DIR__.'/auth.php';

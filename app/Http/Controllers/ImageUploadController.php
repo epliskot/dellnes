@@ -3,6 +3,7 @@
   
 
 namespace App\Http\Controllers;
+use App\Models\Image;
 
   
 
@@ -51,13 +52,19 @@ class ImageUploadController extends Controller
         $request->validate([
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'description',
+            'uploaded_by',
+            'file_path'
+           
+            
 
         ]);
+        Image::create($request->all());
 
     
 
         $imageName = time().'.'.$request->image->extension();  
-
+        
      
 
         $request->image->move(public_path('images'), $imageName);
@@ -72,7 +79,8 @@ class ImageUploadController extends Controller
 
             ->with('success','Takk for bildet. Nå er det lastet opp. Kan ta litt tid før jeg får lagt det ut til å vises. Men sjekk igjen om ca. én dag.')
 
-            ->with('image',$imageName); 
+            ->with('image', $imageName); 
+          
 
     }
 
