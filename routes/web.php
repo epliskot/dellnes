@@ -50,7 +50,7 @@ Route::get('/seNotater', function () {
 })->middleware(['auth', 'verified'])->name('seNotater');
 
 Route::get('/logg', function () {
-    $logg = DB::table('logg')->select('id','oppdatering_av','oppdatering_hva')->get();
+    $logg = DB::table('logg')->select('id','oppdatering_av','oppdatering_hva')->get()->sortDesc();
     return view('logg', compact('logg'));
 })->middleware(['auth', 'verified'])->name('logg');
 
