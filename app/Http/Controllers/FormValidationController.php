@@ -19,6 +19,8 @@ class FormValidationController extends Controller
             'notat' =>'required'
         ]);
         Notats::create($request->all());
+        
         return back()->with('success', 'Notatet er sendt inn!');
     }
+    
 }

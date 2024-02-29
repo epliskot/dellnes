@@ -18,7 +18,8 @@
                     <br />
                     @foreach($notatss as $notats)
                     <strong>{{ $notats->person }} </strong><br />{{ $notats->notat }} 
-                    <br /><small>Opprettet: {{ $notats->created_at }} av {{ $notats->created_by }}</small>
+                    <br /><small>Id: {{ $notats->id }} opprettet: {{ $notats->created_at }} av {{ $notats->created_by }}</small>
+                    
                 
                     <br />
                     <br />

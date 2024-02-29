@@ -45,7 +45,7 @@ Route::get('/slektstre', function () {
 })->middleware(['auth', 'verified'])->name('slektstre');
 
 Route::get('/seNotater', function () {
-    $notatss = DB::table('notats')->select('person','notat','created_by', 'created_at')->get();
+    $notatss = DB::table('notats')->select('id','person','notat','created_by', 'created_at')->get()->sortDesc();
     return view('seNotater', compact('notatss'));
 })->middleware(['auth', 'verified'])->name('seNotater');
 
@@ -60,6 +60,7 @@ Route::get('/notats', function () {
 
 Route::get('/notats', [FormValidationController::class, 'createNotatForm'])->middleware(['auth', 'verified'])->name('notats');
 Route::post('/notats', [FormValidationController::class, 'NotatForm'])->name('validate.notats');
+
 
 use App\Http\Controllers\ImageUploadController;
 
