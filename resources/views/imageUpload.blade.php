@@ -75,12 +75,7 @@
             <x-text-input id="description" class="block mt-1 w-full" type="description" name="description" :value="old('description')" />
             <x-input-error :messages="$errors->get('description')" class="mt-2" />
         </div>
-       <div class="mt-4">
-            <x-input-label for="name" :value="__('name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="name" name="name" :value="old('name')" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
-
+       
        
 
         <div class="mt-4">

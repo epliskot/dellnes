@@ -78,7 +78,7 @@ class ImageUploadController extends Controller
 
         return back()
 
-            ->with('success','Takk for bildet. Nå er det lastet opp. Kan ta litt tid før jeg får lagt det ut til å vises. Men sjekk igjen om ca. én dag.')
+            ->with('success','Takk for bildet. Nå er det lastet opp. Det kan ta litt tid før jeg får lagt det ut til å vises. Jeg skal gi deg beskjed per e-post når bildet er klart for websiden.')
 
             ->with('image', $imageName);
        

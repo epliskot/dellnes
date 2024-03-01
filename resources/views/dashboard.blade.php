@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Meny') }}
         </h2>
     </x-slot>
 
@@ -13,7 +13,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Bildene ligger bak passord og er ikke åpent tilgjengelig for andre enn de som har fått brukernavn og passord.
+                                    Bildene ligger bak passord og er ikke åpent tilgjengelig for andre enn de som har fått brukernavn og passord. Det vil si familie og venner.
                                 </div>
                             </div>
                         </div>
