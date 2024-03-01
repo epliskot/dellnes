@@ -70,22 +70,29 @@
 
                 </div>
                 <div class="mt-4">
-            <x-input-label for="description" :value="__('Skriv gjerne noen emneord (personer på bildet, bryllup, ferie, selskap, fritid, jobb o.l.)')" />
+            <x-input-label for="description" :value="__('Skriv gjerne noen emneord (personer på bildet, årstall, bryllup, ferie, selskap, fritid, jobb o.l.)')" />
+            <!-- <x-text-input id="description" class="block mt-1 w-full" type="description" name="description" :value="old('description')" /> -->
             <x-text-input id="description" class="block mt-1 w-full" type="description" name="description" :value="old('description')" />
             <x-input-error :messages="$errors->get('description')" class="mt-2" />
         </div>
-        <div class="mt-4">
-            <x-input-label for="uploaded_by" :value="__('uploaded_by')" />
-            <x-text-input id="uploaded_by" class="block mt-1 w-full" type="uploaded_by" name="uploaded_by" :value="old('uploaded_by')" />
-            <x-input-error :messages="$errors->get('uploaded_by')" class="mt-2" />
+       <div class="mt-4">
+            <x-input-label for="name" :value="__('name')" />
+            <x-text-input id="name" class="block mt-1 w-full" type="name" name="name" :value="old('name')" />
+            <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+       
+
         <div class="mt-4">
-            <x-input-label for="file_path" :value="__('Filepath')" />
-            <x-text-input id="file_path" class="block mt-1 w-full" type="file_path" name="file_path" :value="old('file_path')" />
-            <x-input-error :messages="$errors->get('file_path')" class="mt-2" />
+          
+            <x-text-input type="hidden" name="file_path" value="Filepathen er" />
+
         </div>
-     
+        <div class="mt-4">
+          
+            <x-text-input type="hidden" name="name" value="{{ __(Auth::user()->name) }}" />
+
+        </div>
 
                 <div class="col-md-6">
 
