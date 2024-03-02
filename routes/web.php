@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FormValidationController;
 use App\Http\Controllers\PeopleController;
+use App\Http\Controllers\ImageUploadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,19 +30,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 Route::get('/bilder', function () {
     $images = DB::table('table_image')->select('id','name','file_path')->get();
     return view('bilder', compact('images'));
 })->middleware(['auth', 'verified'])->name('bilder');
 
-
-
-//Route::get('/slektstre', function () {
-//    return view('slektstre');
-//})->middleware(['auth', 'verified'])->name('slektstre');
-
 Route::get('/slektstre', function () {
-    $persons = DB::table('person')->select('id','etternavn')->get();
+    $persons = DB::table('people')->select('id','etternavn')->get();
     return view('slektstre', compact('persons'));
 })->middleware(['auth', 'verified'])->name('slektstre');
 
@@ -69,16 +65,7 @@ Route::get('/people', function () {
 Route::get('/people', [PeopleController::class, 'createPersonForm'])->middleware(['auth', 'verified'])->name('people');
 Route::post('/people', [PeopleController::class, 'PersonForm'])->name('validate.people');
 
-
-
-use App\Http\Controllers\ImageUploadController;
-
-  
-
-  
-
 Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload')->middleware(['auth', 'verified'])->name('upload-image');
-
 Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
 
 
