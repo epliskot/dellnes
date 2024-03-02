@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FormValidationController;
+use App\Http\Controllers\PersonController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,6 +61,14 @@ Route::get('/notats', function () {
 
 Route::get('/notats', [FormValidationController::class, 'createNotatForm'])->middleware(['auth', 'verified'])->name('notats');
 Route::post('/notats', [FormValidationController::class, 'NotatForm'])->name('validate.notats');
+
+Route::get('/person', function () {
+    return view('person');
+})->middleware(['auth', 'verified'])->name('person');
+
+Route::get('/person', [PersonController::class, 'createPersonForm'])->middleware(['auth', 'verified'])->name('person');
+Route::post('/person', [PersonController::class, 'PersonForm'])->name('validate.person');
+
 
 
 use App\Http\Controllers\ImageUploadController;
