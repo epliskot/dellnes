@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('person', function (Blueprint $table) {
+        Schema::create('people', function (Blueprint $table) {
             $table->id();
             $table->string('etternavn',500)->nullable();
             $table->string('fornavn',400)->nullable();
-            $table->date('dato_dod')->nullable();
-            $table->date('dato_fodt')->nullable();
+            $table->string('dato_dod',300)->nullable();
+            $table->string('dato_fodt',300)->nullable();
             $table->string('fodested',500)->nullable();
             $table->string('navn_fodt',400)->nullable();
             $table->string('parent1',600)->nullable();
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('person');
+        Schema::dropIfExists('people');
     }
 };

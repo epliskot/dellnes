@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FormValidationController;
-use App\Http\Controllers\PersonController;
+use App\Http\Controllers\PeopleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,7 +41,7 @@ Route::get('/bilder', function () {
 //})->middleware(['auth', 'verified'])->name('slektstre');
 
 Route::get('/slektstre', function () {
-    $persons = DB::table('person')->select('id','name')->get();
+    $persons = DB::table('person')->select('id','etternavn')->get();
     return view('slektstre', compact('persons'));
 })->middleware(['auth', 'verified'])->name('slektstre');
 
@@ -62,12 +62,12 @@ Route::get('/notats', function () {
 Route::get('/notats', [FormValidationController::class, 'createNotatForm'])->middleware(['auth', 'verified'])->name('notats');
 Route::post('/notats', [FormValidationController::class, 'NotatForm'])->name('validate.notats');
 
-Route::get('/person', function () {
-    return view('person');
-})->middleware(['auth', 'verified'])->name('person');
+Route::get('/people', function () {
+    return view('people');
+})->middleware(['auth', 'verified'])->name('people');
 
-Route::get('/person', [PersonController::class, 'createPersonForm'])->middleware(['auth', 'verified'])->name('person');
-Route::post('/person', [PersonController::class, 'PersonForm'])->name('validate.person');
+Route::get('/people', [PeopleController::class, 'createPersonForm'])->middleware(['auth', 'verified'])->name('people');
+Route::post('/people', [PeopleController::class, 'PersonForm'])->name('validate.people');
 
 
 

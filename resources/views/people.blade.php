@@ -2,7 +2,10 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('person') }}">
+    @if(Session::has('success'))
+        {{Session::get('success')}}
+        @endif
+    <form method="POST" action="{{ route('validate.people') }}">
         @csrf
 
         <!-- Email Address -->
@@ -29,6 +32,7 @@
             <x-text-input id="dato_dod" class="block mt-1 w-full"
                             type="dato_dod"
                             name="dato_dod"
+                         
                             />
 
             <x-input-error :messages="$errors->get('dato_dod')" class="mt-2" />

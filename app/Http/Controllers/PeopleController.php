@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Person;
+use App\Models\People;
 
-class PersonController extends Controller
+class PeopleController extends Controller
 {
     //
     public function createPersonForm(Request $request) {
-        return view('person');
+        return view('people');
     }
     public function PersonForm(Request $request) {
         $this->validate($request, [
@@ -27,7 +27,7 @@ class PersonController extends Controller
             'var_gift_med'
             
         ]);
-        Person::create($request->all());
+        People::create($request->all());
         
         return back()->with('success', 'Person opprettet.');
     }
