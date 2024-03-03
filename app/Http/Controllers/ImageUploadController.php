@@ -60,14 +60,17 @@ class ImageUploadController extends Controller
             
 
         ]);
-        Image::create($request->all());
-
+       
     
 
         $imageName = time().'.'.$request->image->extension();
             
 
         $request->image->move(public_path('images'), $imageName);
+        
+        $data= $request->all();
+        $data['file_path'] = $imageName;
+        Image::create($data);
        
   
 
@@ -81,6 +84,7 @@ class ImageUploadController extends Controller
             ->with('success','Takk for bildet. Nå er det lastet opp. Det kan ta litt tid før jeg får lagt det ut til å vises. Jeg skal gi deg beskjed per e-post når bildet er klart for websiden.')
 
             ->with('image', $imageName);
+            
        
           
 
