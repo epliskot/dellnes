@@ -20,6 +20,8 @@
                     <small>Id: {{ $people->id }}</small>
                     <br />{{ $people->etternavn }}, {{ $people->fornavn }} ({{ $people->dato_fodt }} - {{ $people->dato_dod }})
                     <br /><small>Far: {{ $people->parent1 }} Mor: {{ $people->parent2 }}</small>
+                    <br /><small>Fødested: {{ $people->fodested }} | Gikk bort: {{ $people->sted_dod }}</small>
+                    <br /><small>Barn: {{ $people->barn }}</small>
                     
                 
                     <br />
