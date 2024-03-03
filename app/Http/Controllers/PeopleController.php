@@ -24,7 +24,8 @@ class PeopleController extends Controller
             'sted_dod',
             'barn',
             'er_gift_med',
-            'var_gift_med'
+            'var_gift_med',
+            'created_by'
             
         ]);
         People::create($request->all());

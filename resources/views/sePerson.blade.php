@@ -17,8 +17,9 @@
 
                     <br />
                     @foreach($peoples as $people)
-                    <br />{{ $people->etternavn }} 
-                    <br /><small>Id: {{ $people->id }} opprettet: {{ $people->created_at }} av {{ $people->created_at }}</small>
+                    <small>Id: {{ $people->id }}</small>
+                    <br />{{ $people->etternavn }}, {{ $people->fornavn }} ({{ $people->dato_fodt }} - {{ $people->dato_dod }})
+                    <br /><small>Far: {{ $people->parent1 }} Mor: {{ $people->parent2 }}</small>
                     
                 
                     <br />
