@@ -21,7 +21,8 @@ class People extends Model
         'sted_dod',
         'barn',
         'er_gift_med',
-        'var_gift_med'
+        'var_gift_med',
+        'created_by'
     ];
 }
 ?>

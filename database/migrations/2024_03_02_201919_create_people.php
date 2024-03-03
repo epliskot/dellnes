@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('barn',700)->nullable();
             $table->string('er_gift_med',500)->nullable();
             $table->string('var_gift_med',500)->nullable();
+            $table->string('created_by',255)->nullable();
             $table->timestamps();
         });
     }

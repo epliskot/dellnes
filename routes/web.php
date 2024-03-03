@@ -68,6 +68,25 @@ Route::post('/people', [PeopleController::class, 'PersonForm'])->name('validate.
 Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload')->middleware(['auth', 'verified'])->name('upload-image');
 Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
 
+Route::get('/sePerson', function () {
+    $peoples= DB::table('people')->select('id','etternavn','fornavn','created_at')->get()->sortDesc();
+    return view('sePerson', compact('peoples'));
+})->middleware(['auth', 'verified'])->name('sePerson');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 require __DIR__.'/auth.php';

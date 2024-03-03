@@ -127,6 +127,12 @@
 
             <x-input-error :messages="$errors->get('var_gift_med')" class="mt-2" />
         </div>
+        <div class="mt-4">
+          
+          <x-text-input type="hidden" name="created_by" value="{{ __(Auth::user()->name) }}" />
+
+      </div>
+     
         
 
 
