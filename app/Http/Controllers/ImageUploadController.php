@@ -56,6 +56,7 @@ class ImageUploadController extends Controller
             'uploaded_by',
             'file_path',
             'name'
+            
            
             
 

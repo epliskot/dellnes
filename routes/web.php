@@ -69,7 +69,7 @@ Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->nam
 Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
 
 Route::get('/sePerson', function () {
-    $peoples= DB::table('people')->select('id','etternavn','fornavn','created_by','parent1','parent2','dato_fodt','dato_dod','fodested','sted_dod','barn')->get()->sortDesc();
+    $peoples= DB::table('people')->select('id','etternavn','fornavn','created_by','parent1','parent2','dato_fodt','dato_dod','fodested','sted_dod','barn')->get()->sortBy('etternavn');
     return view('sePerson', compact('peoples'));
 })->middleware(['auth', 'verified'])->name('sePerson');
 
