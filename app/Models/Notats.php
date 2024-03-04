@@ -13,7 +13,9 @@ class Notats extends Model
         'person',
         'tag',
         'created_by',
-        'notat'
+        'notat',
+        'etternavn',
+        'fornavn'
     ];
 }
 ?>

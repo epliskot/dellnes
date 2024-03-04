@@ -26,10 +26,16 @@
             {{ $message }}
             @enderror
         <!-- Email Address -->
+
         <div class="mt-4">
-            <x-input-label for="person" :value="__('Navn på person det gjelder')" />
-            <x-text-input id="person" class="block mt-1 w-full" type="person" name="person" :value="old('person')" />
-            <x-input-error :messages="$errors->get('person')" class="mt-2" />
+            <x-input-label for="etternavn" :value="__('Etternavn på person det gjelder')" />
+            <x-text-input id="etternavn" class="block mt-1 w-full" type="etternavn" name="etternavn" :value="old('etternavn')" />
+            <x-input-error :messages="$errors->get('etternavn')" class="mt-2" />
+        </div>
+        <div class="mt-4">
+            <x-input-label for="fornavn" :value="__('Fornavn på person det gjelder')" />
+            <x-text-input id="fornavn" class="block mt-1 w-full" type="fornavn" name="fornavn" :value="old('fornavn')" />
+            <x-input-error :messages="$errors->get('fornavn')" class="mt-2" />
         </div>
         <div class="mt-4">
             <x-input-label for="tag" :value="__('Skriv gjerne noen emneord (bryllup, ferie, selskap, fritid, jobb o.l.)')" />
@@ -48,6 +54,11 @@
             </textarea>
             <!-- <x-text-input id="notat" class="block mt-1 w-full" type="notat" name="notat" :value="old('notat')" /> -->
             <x-input-error :messages="$errors->get('notat')" class="mt-2" />
+        </div>
+        <div class="mt-4">
+          
+            <x-text-input type="hidden" name="person" value="null" />
+
         </div>
         <div class="mt-4">
           

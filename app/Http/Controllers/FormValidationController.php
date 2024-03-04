@@ -13,7 +13,10 @@ class FormValidationController extends Controller
     }
     public function NotatForm(Request $request) {
         $this->validate($request, [
-            'person' => 'required',
+            'person',
+            'etternavn',
+            'fornavn',
+            'fornavn',
             'tag' => 'required',
             'created_by',
             'notat' =>'required'
