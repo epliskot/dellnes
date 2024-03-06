@@ -441,6 +441,11 @@ modal.style.display = "none";
             </div>
         </div>
     </div>
+    @foreach($images as $images)
+                    <strong>{{ $images->name }}, {{ $images->file_path }} </strong><br />
+                               
+                    <br />
+                    @endforeach
     
 
 </x-app-layout>

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('tag',300);
             $table->string('created_by',200);
             $table->text('notat');
+            $table->string('bilder',5);
             $table->timestamps();
         });
     }

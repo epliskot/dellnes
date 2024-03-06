@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/bilder', function () {
-    $images = DB::table('table_image')->select('id','name','file_path')->get();
+    $images = DB::table('images')->select('id','name','file_path')->get();
     return view('bilder', compact('images'));
 })->middleware(['auth', 'verified'])->name('bilder');
 

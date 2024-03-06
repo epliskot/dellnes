@@ -23,7 +23,7 @@
                     <br /><small>Fødested: {{ $people->fodested }} | Gikk bort: {{ $people->sted_dod }}</small>
                     <br /><small>Barn: {{ $people->barn }}</small>
                     
-                
+                    
                     <br />
                     <br />
                     @endforeach
