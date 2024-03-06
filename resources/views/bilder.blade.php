@@ -432,9 +432,9 @@ modal.style.display = "none";
                     {{ __("Mariann") }}
 
                     <br />
-                    @foreach($images as $table_image)
+                  <!--  @foreach($images as $table_image)
                     {{ $table_image->id }} {{ $table_image->name }} {{ $table_image->file_path }}
-                    @endforeach
+                    @endforeach  -->
                     
                     
                 </div>

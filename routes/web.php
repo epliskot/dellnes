@@ -42,7 +42,7 @@ Route::get('/slektstre', function () {
 })->middleware(['auth', 'verified'])->name('slektstre');
 
 Route::get('/seNotater', function () {
-    $notatss = DB::table('notats')->select('id','person','notat','created_by', 'created_at','etternavn','fornavn')->get()->sortBy('etternavn');
+    $notatss = DB::table('notats')->select('id','person','notat','created_by', 'created_at','etternavn','fornavn','bilder')->get()->sortBy('etternavn');
     return view('seNotater', compact('notatss'));
 })->middleware(['auth', 'verified'])->name('seNotater');
 

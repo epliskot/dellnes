@@ -19,7 +19,8 @@ class FormValidationController extends Controller
             'fornavn',
             'tag' => 'required',
             'created_by',
-            'notat' =>'required'
+            'notat' =>'required',
+            'bilder'
         ]);
         Notats::create($request->all());
         

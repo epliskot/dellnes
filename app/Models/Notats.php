@@ -15,7 +15,8 @@ class Notats extends Model
         'created_by',
         'notat',
         'etternavn',
-        'fornavn'
+        'fornavn',
+        'bilder'
     ];
 }
 ?>
