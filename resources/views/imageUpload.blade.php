@@ -28,7 +28,7 @@
 
         </div>
 
-        <img src="images/{{ Session::get('image') }}">
+        <!-- <img src="images/{{ Session::get('image') }}"> -->
 
         @endif
 
@@ -59,7 +59,8 @@
         <form action="{{ route('image.upload.post') }}" method="POST" enctype="multipart/form-data">
 
             @csrf
-
+            <br />
+            <br />
             <div class="row">
 
     
