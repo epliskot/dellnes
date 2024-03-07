@@ -11,8 +11,8 @@ class Logg extends Model
     public $fillable = [
         
         'oppdatering_av',
-        'oppdatering_hvem',
-        'created_at'
+        'oppdatering_hva',
+        
         
     ];
 }

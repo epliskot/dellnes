@@ -10,11 +10,13 @@
     </x-slot>
 
 
-
+<br />
+<br />
 @if(Session::has('success'))
         {{Session::get('success')}}
         @endif
-       
+ <br />
+ <br />      
     <form method="post" action="{{ route('validate.notats') }}" novalidate>
         @csrf
 

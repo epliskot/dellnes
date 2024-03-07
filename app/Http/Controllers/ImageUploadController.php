@@ -4,6 +4,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Image;
+use App\Models\Logg;
 use Illuminate\Support\Facades\Storage;
   
 
@@ -75,6 +76,10 @@ class ImageUploadController extends Controller
         $data= $request->all();
         $data['file_path'] = $imageName;
         Image::create($data);
+
+        $oppdatering = $request->all();
+
+        Logg::create(['oppdatering_av' => $oppdatering['name'], 'oppdatering_hva' => "Opprettet bilde [ " . $oppdatering['description'] . " ]" ]);
        
       
       //$request->image->move(Storage::disk('local')->put('storage/app/images' . '/' . $imageName, $request->image));

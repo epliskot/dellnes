@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Notats;
+use App\Models\Logg;
 
 class FormValidationController extends Controller
 {
@@ -22,9 +23,17 @@ class FormValidationController extends Controller
             'notat' =>'required',
             'bilder'
         ]);
-        Notats::create($request->all());
         
-        return back()->with('success', 'Notatet er sendt inn!');
+        Notats::create($request->all());
+
+        
+        $oppdatering = $request->all();
+        
+        Logg::create(['oppdatering_av' => $oppdatering['created_by'], 'oppdatering_hva' => "Opprettet notat på " . $oppdatering['fornavn'] . " " . $oppdatering['etternavn'] ]);
+        
+        
+
+        return back()->with('success', 'Notatet er sendt inn! Hvis du ønsker å lese det, så gå tilbake til Meny');
     }
     
 }
