@@ -19,7 +19,7 @@
                     @foreach($peoples as $people)
                     <small>Id: {{ $people->id }}</small>
                     <br />{{ $people->etternavn }}, {{ $people->fornavn }} ({{ $people->dato_fodt }} - {{ $people->dato_dod }})
-                    <br /><small>Far: {{ $people->parent1 }} Mor: {{ $people->parent2 }}</small>
+                    <br /><small>Far: {{ $people->parent1 }} | Mor: {{ $people->parent2 }}</small>
                     <br /><small>Født: {{ $people->fodested }} </small>
                     @if (!is_null($people->sted_dod))
                       <small> | Gikk bort: {{ $people->sted_dod }}</small>
@@ -28,7 +28,9 @@
                     
                     @if (!is_null($people->barn))
                     <br /><small>Barn: {{ $people->barn }}</small>
-                    @endif                   
+                    
+                    @endif
+                    <br /><font size="1"><b>{ Oppføringen er registrért av: {{ $people->created_by }} den {{ $people->created_at }} }</b></font>                   
                     <br />
                     <br />
                     @endforeach
