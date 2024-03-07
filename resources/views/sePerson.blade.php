@@ -20,10 +20,15 @@
                     <small>Id: {{ $people->id }}</small>
                     <br />{{ $people->etternavn }}, {{ $people->fornavn }} ({{ $people->dato_fodt }} - {{ $people->dato_dod }})
                     <br /><small>Far: {{ $people->parent1 }} Mor: {{ $people->parent2 }}</small>
-                    <br /><small>Fødested: {{ $people->fodested }} | Gikk bort: {{ $people->sted_dod }}</small>
+                    <br /><small>Født: {{ $people->fodested }} </small>
+                    @if (!is_null($people->sted_dod))
+                      <small> | Gikk bort: {{ $people->sted_dod }}</small>
+                    
+                    @endif    
+                    
+                    @if (!is_null($people->barn))
                     <br /><small>Barn: {{ $people->barn }}</small>
-                    
-                    
+                    @endif                   
                     <br />
                     <br />
                     @endforeach
