@@ -4,7 +4,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Image;
-
+use Illuminate\Support\Facades\Storage;
   
 
 use Illuminate\Http\Request;
@@ -63,17 +63,21 @@ class ImageUploadController extends Controller
         ]);
        
     
-
+        
         $imageName = time().'.'.$request->image->extension();
+
+        //$imageName = time().'.'.$request->image->extension();
             
 
-        $request->image->move(public_path('images'), $imageName);
-        
+        $request->image->move(Storage::disk('local')->path('images'), $imageName);
+             
+                            
         $data= $request->all();
         $data['file_path'] = $imageName;
         Image::create($data);
        
-  
+      
+      //$request->image->move(Storage::disk('local')->put('storage/app/images' . '/' . $imageName, $request->image));
 
         /* Store $imageName name in DATABASE from HERE */
         
