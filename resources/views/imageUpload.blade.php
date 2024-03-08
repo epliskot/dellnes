@@ -91,11 +91,13 @@
 
         </div>
 
-                <div class="col-md-6">
+        <div class="flex items-center mt-4">
+           
 
-                    <button type="submit" class="btn btn-success">[Send inn]</button>
-
-                </div>
+           <x-primary-button class="ms-3">
+               {{ __('Last opp bilde') }}
+           </x-primary-button>
+       </div>
 
      
 

@@ -80,7 +80,14 @@
         </div>
        
         
-        <input type="submit" name="send" value="[SEND INN]">
+        <!-- <input type="submit" name="send" value="[SEND INN]"> -->
+        <div class="flex items-center mt-4">
+           
+
+            <x-primary-button class="ms-3">
+                {{ __('Opprett notat') }}
+            </x-primary-button>
+        </div>
     </form>
 
 </x-app-layout>

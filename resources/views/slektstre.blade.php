@@ -12,39 +12,54 @@
     <div class="tree">
       <ul>
         <li>
-          <a href="#">Parent</a>
+          <a href="#">Oddleif Kristian Olsen</a>
+      
+        
           <ul>
             <li>
-              <a href="#">Child</a>
+              <a href="#">Aina Liss Olsen</a>
               <ul>
                 <li>
-                  <a href="#">Grand Child</a>
+                  <a href="#">Dave René Olsen</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#">Child</a>
+              <a href="#">Knut Oddleif Olsen</a>
               <ul>
                 <li>
-                  <a href="#">Grand Child</a>
+                  <a href="#">Einar Daniel Perz Olsen</a>
                 </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Jane Liv Dellnes</a>
+              <ul>
                 <li>
-                  <a href="#">Grand Child</a>
+                  <a href="#">Mariann Dellnes</a>
                   <ul>
                     <li>
-                      <a href="#">Great Grand Child</a>
-                    </li>
-                    <li>
-                      <a href="#">Great Grand Child</a>
-                    </li>
-                    <li>
-                      <a href="#">Great Grand Child</a>
+                      <a href="#">Ane Dellnes</a>
                     </li>
                   </ul>
                 </li>
+                
                 <li>
-                  <a href="#">Grand Child</a>
+                  <a href="#">Jon André Dellnes</a>
+                  <ul>
+                    <li>
+                      <a href="#">Sigrid Reiling Dellnes</a>
+                    </li>
+                    <li>
+                      <a href="#">Idunn Reiling Dellnes</a>
+                    </li>
+                    <li>
+                      <a href="#">Arnulf Kristian Reiling Dellnes</a>
+                    </li>
+                  </ul>
                 </li>
+                
+               
               </ul>
             </li>
           </ul>
