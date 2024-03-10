@@ -12,17 +12,18 @@
         <div>
             <x-input-label for="etternavn" :value="__('Etternavn')" />
            <!-- <x-text-input id="etternavn" class="block mt-1 w-full" type="etternavn" name="etternavn" :value="old('etternavn')" required autofocus autocomplete="etternavn"/> -->
-           <x-text-input id="etternavn"   type="etternavn" name="etternavn" :value="old('etternavn')" required autofocus autocomplete="etternavn"/>
+           <x-text-input id="etternavn" class="block mt-1 w-full" type="etternavn" name="etternavn" :value="old('etternavn')" required autofocus autocomplete="etternavn"/>
            <x-input-error :messages="$errors->get('etternavn')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="fornavn" :value="__('Fornavn')" />
+            <x-input-label  for="fornavn" :value="__('Fornavn')" />
 
             <x-text-input id="fornavn"  
                             type="fornavn"
                             name="fornavn"
+                            class="block mt-1 w-full"
                             />
 
             <x-input-error :messages="$errors->get('fornavn')" class="mt-2" />
@@ -33,7 +34,7 @@
             <x-text-input id="dato_dod"  
                             type="dato_dod"
                             name="dato_dod"
-                         
+                            class="block mt-1 w-full"
                             />
 
             <x-input-error :messages="$errors->get('dato_dod')" class="mt-2" />
