@@ -18,7 +18,7 @@ class FormValidationController extends Controller
             'etternavn',
             'fornavn',
             'fornavn',
-            'tag' => 'required',
+            'tag',
             'created_by',
             'notat' =>'required',
             'bilder'

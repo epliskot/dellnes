@@ -17,8 +17,11 @@
 
                     <br />
                     @foreach($notatss as $notats)
+                    @php
+                    $dateString = substr($notats->created_at, 0, 10);
+                    @endphp
                     <strong>{{ $notats->etternavn }}, {{ $notats->fornavn }} </strong><br />{{ $notats->notat }} 
-                    <br /><small>Id: {{ $notats->id }} opprettet: {{ $notats->created_at }} av {{ $notats->created_by }}</small>
+                    <br /><small>Id: {{ $notats->id }} opprettet: {{ $dateString }} av {{ $notats->created_by }}</small>
                                
                     <br />
                     @if ($notats->bilder =='Ja')
