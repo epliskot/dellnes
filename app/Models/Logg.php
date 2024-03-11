@@ -12,6 +12,7 @@ class Logg extends Model
         
         'oppdatering_av',
         'oppdatering_hva',
+        'uploaded_by',
         
         
     ];

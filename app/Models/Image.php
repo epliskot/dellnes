@@ -14,7 +14,8 @@ class Image extends Model
         'updated_at',
         'file_path',
         'description',
-        'name'
+        'name',
+        'uploaded_by',
         
     ];
 }

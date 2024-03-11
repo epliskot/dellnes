@@ -75,11 +75,13 @@ class ImageUploadController extends Controller
                             
         $data= $request->all();
         $data['file_path'] = $imageName;
+        //$data['uploaded_by'] = 'test';
         Image::create($data);
 
         $oppdatering = $request->all();
 
-        Logg::create(['oppdatering_av' => $oppdatering['name'], 'oppdatering_hva' => "Lastet opp bilde [ " . $oppdatering['description'] . " ]" ]);
+        Logg::create(['oppdatering_av' => $oppdatering['name'], 'oppdatering_hva' => "Lastet opp bilde [ " . $oppdatering['description'] . " ]"
+         ]);
        
       
       //$request->image->move(Storage::disk('local')->put('storage/app/images' . '/' . $imageName, $request->image));
