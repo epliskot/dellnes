@@ -17,6 +17,7 @@
 
                     <br />
                     @foreach($notatss as $notats)
+                    @foreach($imagess as $images)
                     @php
                     $dateString = substr($notats->created_at, 0, 10);
                     @endphp
@@ -25,10 +26,11 @@
                                
                     <br />
                     @if ($notats->bilder =='Ja')
-                      Bilder: Ja
+                      Bilder: Ja {{ $images->file_path }}
                     </br>
                     @endif
                     <br />
+                    @endforeach
                     @endforeach
                     
                 </div>

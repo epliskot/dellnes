@@ -43,7 +43,8 @@ Route::get('/slektstre', function () {
 
 Route::get('/seNotater', function () {
     $notatss = DB::table('notats')->select('id','person','notat','created_by', 'created_at','etternavn','fornavn','bilder')->get()->sortBy('etternavn');
-    return view('seNotater', compact('notatss'));
+    $imagess = DB::table('images')->select('file_path','description')->get();
+    return view('seNotater', compact('notatss','imagess'));
 })->middleware(['auth', 'verified'])->name('seNotater');
 
 Route::get('/logg', function () {
